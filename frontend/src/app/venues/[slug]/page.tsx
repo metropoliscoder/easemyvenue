@@ -99,9 +99,16 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function Card({
+  children,
+  className = "",
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`bg-[rgba(15,12,8,0.8)] border border-[rgba(201,168,76,0.13)] rounded-[20px] p-7 ${className}`}>
+    <div
+      className={`bg-[rgba(15,12,8,0.8)] border border-[rgba(201,168,76,0.13)] rounded-[20px] p-7 ${className}`}
+      {...props}
+    >
       {children}
     </div>
   );
