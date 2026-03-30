@@ -1,4 +1,4 @@
-const Heading = ({heading}) => {
+const Heading = ({heading}:{heading:string}) => {
   return (
     <>
         <div className="flex items-center justify-center gap-4 my-10">
